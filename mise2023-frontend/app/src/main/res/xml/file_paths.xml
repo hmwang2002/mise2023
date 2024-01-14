@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--因为要安装的apk是存储在sd卡的，这里的映射就相当于:
+     content:虚拟路径 映射到了-> Environment.getExternalStorageDirectory()
+    -->
+    <external-path
+        name="external_path"
+        path="." />
+</paths>

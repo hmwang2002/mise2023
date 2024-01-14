@@ -1,0 +1,19 @@
+server:
+  port: 8200
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql:3306/community_center?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
+    username: root
+    password: mise2023_njuse123
+  application:
+    name: community-center
+  cloud:
+    nacos:
+      discovery:
+        server-addr: nacos:8848
+    sentinel:
+      transport:
+        # TODO: enter your own server ip
+        dashboard: localhost:9088

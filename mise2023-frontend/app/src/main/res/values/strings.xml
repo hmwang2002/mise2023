@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">PaoPao</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">frechen026</string>
+    <string name="nav_header_subtitle">UID. 000001</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_square">广场</string>
+    <string name="menu_community">社区</string>
+    <string name="menu_home">主页</string>
+    <string name="menu_setting">设置</string>
+    
+    <string name="Password">密码</string>
+    <string name="Username">用户名</string>
+    <string name="Login">登录</string>
+    <string name="recommend">还没有账号？</string>
+    <string name="register">点我注册</string>
+    <string name="editPassword">忘记密码</string>
+    <string name="phone">电话</string>
+    <string name="remember_password">记住密码</string>
+    <string name="community_hot">热门</string>
+    <string name="community_recommend">推荐</string>
+    <string name="community_in">关注</string>
+    <string name="TextView">TextView</string>
+    <string name="follow">关注</string>
+    <string name="message">消息</string>
+    <string name="community">社区</string>
+    <string name="paopap">泡泡</string>
+    <string name="like">喜欢</string>
+    <string name="redbook">小红书风格</string>
+    <string name="tieba">贴吧风格</string>
+    <string name="poem">poem</string>
+    <string name="let_s_cook_words">Let\'s Cook Words!</string>
+    <string name="commit">生成文章</string>
+    <string name="delete">删除</string>
+    <string name="emptyPost">噫，什么都没找到/(ㄒoㄒ)/~~</string>
+    <string name="comeToShare">快来分享你的生活吧！</string>
+    <string name="articleTitle">文章标题</string>
+    <string name="articleContent">内容</string>
+    <string name="askToAI">没有灵感？何不问问AI</string>
+    <string name="cancel">取消</string>
+    <string name="fabu">发布</string>
+
+</resources>

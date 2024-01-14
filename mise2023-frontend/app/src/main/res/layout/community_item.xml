@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:padding="6dp">
+
+<!--    <ImageView-->
+<!--        android:id="@+id/iv_cover"-->
+<!--        android:layout_width="70dp"-->
+<!--        android:layout_height="70dp"-->
+<!--        android:foreground="@drawable/shape_community_cover"-->
+<!--        android:layout_marginStart="5dp"-->
+<!--        android:src="@drawable/avatar0" />-->
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_cover"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/avatar0"
+        android:layout_margin="4dp"
+        app:riv_corner_radius_bottom_left="25dp"
+        app:riv_corner_radius_bottom_right="25dp"
+        app:riv_corner_radius_top_left="25dp"
+        app:riv_corner_radius_top_right="25dp"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/tv_community_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="薅羊毛小分队"
+        android:textSize="18sp"
+        android:layout_toEndOf="@+id/iv_cover"
+        android:layout_toRightOf="@+id/iv_cover"
+        android:layout_toLeftOf="@+id/cb_community_follow"
+        android:layout_alignTop="@+id/iv_cover" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_community_follow"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginTop="6dp"-->
+<!--        android:layout_marginBottom="5dp"-->
+<!--        android:text="@string/TextView"-->
+<!--        android:layout_below="@id/tv_community_name"-->
+<!--        android:layout_toEndOf="@+id/iv_cover"-->
+<!--        android:layout_toRightOf="@+id/iv_cover" />-->
+
+    <CheckBox
+        android:id="@+id/cb_community_follow"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/select_follow"
+        android:button="@null"
+        android:gravity="center"
+        android:text="@string/follow"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/bt_cancel_community_follow"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:backgroundTint="@color/lightRed"
+        android:textSize="12sp"
+        android:button="@null"
+        android:gravity="center"
+        android:text="取消关注"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:enabled="false"/>
+
+    <Button
+        android:id="@+id/bt_apply_community_follow"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:textSize="12sp"
+        android:backgroundTint="@color/theme"
+        android:button="@null"
+        android:gravity="center"
+        android:text="申请加入"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:enabled="false"/>
+
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<!-- button_background.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#808080" /> <!-- 已选中时灰色背景 -->
+            <corners android:radius="10dp" /> <!-- 圆角半径 -->
+        </shape>
+    </item>
+    <item android:state_checked="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/theme" /> <!-- 未选中时绿色背景 -->
+            <corners android:radius="10dp" /> <!-- 圆角半径 -->
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_main.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/AitextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/comeToShare"
+        android:textSize="20sp"
+
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        app:layout_constraintWidth_percent="0.85"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/articleTitle"
+        android:padding="15dp"
+        android:background="@drawable/txt_radiuborder"
+        app:layout_constraintWidth_percent="0.85"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AitextView" />
+
+    <EditText
+        android:id="@+id/contentEditText"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/txt_radiuborder"
+        android:hint="@string/articleContent"
+        android:padding="15dp"
+        android:textIsSelectable="true"
+        android:gravity="top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleEditText"
+        app:layout_constraintWidth_percent="0.85" />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.4"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintTop_toBottomOf="@+id/contentEditText"
+        app:layout_constraintStart_toStartOf="@+id/contentEditText"
+        android:layout_marginTop="10dp"
+        android:text="记录生活点滴:"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        />
+
+    <ImageView
+        android:id="@+id/postImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.4"
+        app:layout_constraintHeight_percent="0.2"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/tianjiatupian"
+        app:layout_constraintEnd_toEndOf="@+id/contentEditText"
+        app:layout_constraintTop_toBottomOf="@+id/contentEditText" />
+
+    <EditText
+        android:id="@+id/tagEditText"
+        android:layout_width="0dp"
+        android:hint="请输入tag"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.4"
+        app:layout_constraintTop_toBottomOf="@+id/postImage"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/to_AI"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.35"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tagEditText"
+        app:layout_constraintEnd_toEndOf="@+id/postImage"
+        android:text="@string/askToAI"
+        android:textColor="#008B45"
+        android:layout_marginBottom="10dp"
+        android:textSize="14sp" />
+    <Button
+        android:id="@+id/post_cancel_Button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintHeight_percent="0.07"
+        android:layout_marginTop="10dp"
+        android:text="@string/cancel"
+        app:layout_constraintStart_toStartOf="@+id/contentEditText"
+        app:layout_constraintTop_toBottomOf="@+id/tagEditText" />
+
+    <Button
+        android:id="@+id/post_commit_Button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintHeight_percent="0.07"
+        android:text="@string/fabu"
+        app:layout_constraintEnd_toEndOf="@+id/contentEditText"
+        app:layout_constraintTop_toTopOf="@+id/post_cancel_Button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

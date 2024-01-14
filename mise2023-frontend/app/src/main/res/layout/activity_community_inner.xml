@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <ImageView
+                android:id="@+id/iv_communityInnerBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/ic_back" />
+            <TextView
+                android:id="@+id/tv_communityInnerTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:text="社区"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/iv_community_image"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:src="@drawable/avatar0"
+                    app:riv_corner_radius_bottom_left="30dp"
+                    app:riv_corner_radius_bottom_right="30dp"
+                    app:riv_corner_radius_top_left="30dp"
+                    app:riv_corner_radius_top_right="30dp"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:id="@+id/tv_community_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="top"
+                    android:textSize="18sp"
+                    android:text="薅羊毛小分队"
+                    android:textColor="@android:color/black"
+                    android:layout_toEndOf="@id/iv_community_image"/>
+
+
+                <Button
+                    android:id="@+id/bt_join"
+                    android:layout_width="65dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginStart="12dp"
+                    android:text="关注"
+                    android:layout_gravity="bottom"
+                    android:layout_toEndOf="@id/iv_community_image"/> <!-- Aligns the button to the right -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp">
+
+                    <ImageView
+                        android:layout_marginTop="12dp"
+                        android:layout_marginStart="25dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@mipmap/logo"/>
+
+                    <LinearLayout
+                        android:id="@+id/linear_managerMember"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="end">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:text="社区成员"
+                            android:layout_marginTop="9dp"
+                            android:textSize="15sp"
+                            android:layout_gravity="center_vertical" />
+
+                        <ImageView
+                            android:id="@+id/iv_manageMember"
+                            android:layout_marginTop="9dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_enter"
+                            android:layout_gravity="center_vertical" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ListView
+            android:id="@+id/lv_in_community"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_write"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_write"
+        android:layout_margin="20dp"
+        android:layout_gravity="bottom|end"/>
+
+</FrameLayout>

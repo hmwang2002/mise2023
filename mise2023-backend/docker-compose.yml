@@ -1,0 +1,98 @@
+version: "2.10.2"
+services:
+  nacos:
+    image: nacos/nacos-server:v2.2.3
+    container_name: nacos
+    ports:
+      - 8848:8848
+      - 9848:9848
+      - 9849:9849
+    environment:
+      - MODE=standalone
+    restart: always
+  mysql:
+    image: mysql:8.0.35
+    container_name: mysql
+    ports:
+      - 3306:3306
+    environment:
+      - TZ=Asia/Shanghai
+      # 指定用户root的密码
+      - MYSQL_ROOT_PASSWORD=mise2023_njuse123
+    volumes:
+      - /usr/local/mise2023/mysql/conf:/etc/mysql/conf.d
+      - /usr/local/mise2023/mysql/data:/var/lib/mysql
+      - /usr/local/mise2023/mysql/init:/docker-entrypoint-initdb.d
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - 27017:27017
+    volumes:
+      - /usr/local/mise2023/mongo/data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: mise2023_njuse123
+      MONGO_INITDB_DATABASE: postcenter
+
+  redis:
+    image: redis:latest
+    container_name: redis
+    environment:
+      - REDIS_PASSWORD=mise2023_njuse123
+      - TZ=Asia/Shanghai
+    ports:
+      - 6379:6379
+    volumes:
+      - /usr/local/mise2023/redis/redis.conf:/etc/redis/redis.conf
+      - /usr/local/mise2023/redis/data:/data
+      - /usr/local/mise2023/redis/sysctl.conf:/etc/sysctl.conf
+    command: ["redis-server", "--requirepass", "mise2023_njuse123"]
+  community-center:
+    image: community-center:latest
+    container_name: community-center
+    environment:
+      - TZ=Asia/Shanghai
+    build: .
+    ports:
+      - 8200:8200
+    depends_on:
+      - mysql
+      - redis
+  post-center:
+    image: post-center:latest
+    container_name: post-center
+    environment:
+      - TZ=Asia/Shanghai
+    build: .
+    ports:
+      - 8081:8081
+    depends_on:
+      - mysql
+      - mongodb
+    links:
+      - mongodb
+  user-center:
+    image: user-center:latest
+    container_name: user-center
+    environment:
+      - TZ=Asia/Shanghai
+    build: .
+    ports:
+      - 8080:8080
+    depends_on:
+      - mysql
+      - redis
+      - post-center
+      - community-center
+    links:
+      - redis
+      - mysql
+  gateway:
+    image: gateway:latest
+    container_name: gateway
+    environment:
+      - TZ=Asia/Shanghai
+    build: .
+    ports:
+      - 8800:8800

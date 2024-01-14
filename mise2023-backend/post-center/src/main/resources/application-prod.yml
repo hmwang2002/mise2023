@@ -1,0 +1,29 @@
+server:
+  port: 8081
+
+spring:
+  data:
+    mongodb:
+      username: root
+      password: mise2023_njuse123
+      host: mongodb      # MongoDB 主机地址
+      port: 27017          # MongoDB 端口
+      database: postcenter  # 数据库名称
+  # 应用名称
+  application:
+    name: post-center
+  cloud:
+    nacos:
+      discovery:
+        server-addr: nacos:8848
+    sentinel:
+      transport:
+        # TODO: enter your own server ip
+        dashboard: localhost:9088
+
+obs:
+  endPoint: obs.cn-east-3.myhuaweicloud.com
+  ak: TUDUSE2FLAMFLDFRICGU
+  sk: C6edfKMnvlJFZTuG4r63GXmSh8EB75aS2EbJKRkT
+  bucketName: jiffies
+  prefix: https://jiffies.obs.cn-east-3.myhuaweicloud.com/

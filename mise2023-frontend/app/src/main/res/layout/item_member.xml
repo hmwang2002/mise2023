@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_member_avatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="12dp"
+        android:src="@drawable/avatar0"
+        app:riv_corner_radius_bottom_left="60dp"
+        app:riv_corner_radius_bottom_right="60dp"
+        app:riv_corner_radius_top_left="60dp"
+        app:riv_corner_radius_top_right="60dp"
+        android:scaleType="centerCrop"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_role"
+        android:layout_width="30dp"
+        android:layout_height="15dp"
+        app:cardCornerRadius="2dp"
+        android:layout_marginTop="30dp"
+        app:cardBackgroundColor="@color/orange">
+        <TextView
+            android:id="@+id/tv_role"
+            android:layout_width="30dp"
+            android:layout_height="15dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="8sp"
+            android:text="群主"/>
+
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/tv_member_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:text="空白"/>
+    <TextView
+        android:id="@+id/tv_me"
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginStart="150dp"
+        android:visibility="gone"
+        android:text="我" />
+
+</LinearLayout>

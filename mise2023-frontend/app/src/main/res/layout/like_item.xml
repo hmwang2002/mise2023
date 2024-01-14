@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingBottom="20dp">
+    <!--头像-->
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_like_avatar"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/avatar0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius_bottom_left="23dp"
+        app:riv_corner_radius_bottom_right="23dp"
+        app:riv_corner_radius_top_left="23dp"
+        app:riv_corner_radius_top_right="23dp"
+        android:scaleType="centerCrop"/>
+
+
+
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/iv_like_avatar"-->
+<!--        android:layout_width="45dp"-->
+<!--        android:layout_height="45dp"-->
+<!--        android:layout_marginStart="12dp"-->
+<!--        android:layout_marginTop="24dp"-->
+<!--        android:foreground="@drawable/circle"-->
+<!--        android:src="@drawable/avatar0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <!--用户名-->
+    <TextView
+        android:id="@+id/tv_like_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="frechen026"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/iv_like_avatar"
+        app:layout_constraintTop_toTopOf="@id/iv_like_avatar" />
+
+    <!--发布时间-->
+    <TextView
+        android:id="@+id/tv_like_postTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="2023.11.17"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/tv_like_username"
+        app:layout_constraintTop_toBottomOf="@id/tv_like_username" />
+    <!--内容-->
+    <TextView
+        android:id="@+id/tv_like_desc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="20dp"
+        android:text="到底什么是区块链？我一直不太明白，都说是是用于解决交易的信任和安全问题。怎么实现，我觉得任重道远。"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_like_username"
+        app:layout_constraintTop_toBottomOf="@id/iv_like_avatar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

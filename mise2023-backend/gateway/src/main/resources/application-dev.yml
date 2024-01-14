@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  #网关
+    gateway:
+      routes: #路由配置
+          #社区服务
+        - id: community-center #路由id，自定义，具有唯一性
+          uri: lb://community-center #路由的目标地址
+          predicates:
+            - Path=/application/**,/community/**
+          #帖子服务
+        - id: post-center
+          uri: lb://post-center
+          predicates:
+            - Path=/post/**
+          #用户服务
+        - id: user-center
+          uri: lb://user-center
+          predicates:
+            - Path=/oss/**,/sms/**,/uc/**,/user/**
+  main:
+    # 忽略web依赖，避免于gateway冲突
+    web-application-type: reactive
+
+server:
+  port: 8800
